@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@900&display=swap');
+
+
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
@@ -29,8 +32,56 @@ footer, header, hgroup, menu, nav, section {
 	display: block;
 }
 body {
-	line-height: 1;
+    line-height: 1;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    min-height:100vh;
+    background:#1b1b1b;
 }
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+h3 {
+    position: relative;
+    font-size: 24px;
+    color: green;
+    font-weight: 500px;
+    margin-bottom: 20px;
+}
+
+#form {
+    position: relative;
+    border: 2px solid 131313;
+    background: linear-gradient(#1e2024,#18181c);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+#form #email {
+    width:300px;
+    outline: none;
+    background: transparent;
+    border: navajowhite;
+    padding: 12px 15px;
+    padding-right: 50px;
+    color: oldlace;
+    font-size: 18px;
+}
+
+#form .indicator {
+    top:20px;
+    right: 20px;
+    width: 10px;
+    height:10px;
+    background: #555;
+    border-radius: 50%;
+}
+
 ol, ul {
 	list-style: none;
 }
