@@ -1,43 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@900&display=swap');
 
-
-/* http://meyerweb.com/eric/tools/css/reset/ 
-   v2.0 | 20110126
-   License: none (public domain)
-*/
-
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
-}
-/* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section {
-	display: block;
-}
 body {
     line-height: 1;
     display: flex;
     justify-content: center;
     align-items:center;
     min-height:100vh;
-    background:#1b1b1b;
+    background:#a0ed34;
 }
 
 * {
@@ -51,12 +20,12 @@ h3 {
     font-size: 24px;
     color: green;
     font-weight: 500px;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
 
 #form {
     position: relative;
-    border: 2px solid 131313;
+    border: 2px solid #131313;
     background: linear-gradient(#1e2024,#18181c);
     border-radius: 8px;
     overflow: hidden;
@@ -74,6 +43,7 @@ h3 {
 }
 
 #form .indicator {
+    position: absolute;
     top:20px;
     right: 20px;
     width: 10px;
@@ -82,19 +52,18 @@ h3 {
     border-radius: 50%;
 }
 
-ol, ul {
-	list-style: none;
-}
-blockquote, q {
-	quotes: none;
-}
-blockquote:before, blockquote:after,
-q:before, q:after {
-	content: '';
-	content: none;
-}
-table {
-	border-collapse: collapse;
-	border-spacing: 0;
+#form.valid .indicator {
+    background: #0f0;
+    box-shadow: 0 0 05px #0f0,
+                0 0 10px #0f0,
+                0 0 20px #0f0,
+                0 0 40px #0f0;
 }
 
+#form.invalid .indicator {
+    background: #f00;
+    box-shadow: 0 0 5px #f00,
+                0 0 10px #f00,
+                0 0 20px #f00,
+                0 0 40px #f00;
+}
